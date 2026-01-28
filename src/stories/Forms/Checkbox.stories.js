@@ -36,9 +36,15 @@ export const WithCustomClassName = () => {
     const [checked, setChecked] = useState(false);
     return (
         <div className="space-y-3 bg-gray-800 p-4">
+            <h3 className="text-white mb-2">Using className prop (simplified syntax):</h3>
             <Checkbox label="White text checkbox" className="text-white" checked={checked} onChange={(event_) => setChecked(event_.target.checked)} />
             <Checkbox label="Red text checkbox" className="text-red-500 font-bold" />
             <Checkbox label="Large text checkbox" className="text-xl" />
+            
+            <h3 className="text-white mt-4 mb-2">Using classNames.label prop (explicit syntax):</h3>
+            <Checkbox label="White text checkbox" classNames={{ label: "text-white" }} />
+            <Checkbox label="Red text checkbox" classNames={{ label: "text-red-500 font-bold" }} />
+            <Checkbox label="Large text checkbox" classNames={{ label: "text-xl" }} />
         </div>
     );
 };

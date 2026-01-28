@@ -8,10 +8,10 @@ import styles from "./Checkbox.module.css";
  * Checkbox component with label support
  * @param {Object} props
  * @param {React.ReactNode} [props.label] - Optional label text. When provided, the className prop will be applied to this label.
- * @param {string} [props.className] - CSS class names to apply to the label element (only effective when label is provided)
- * @param {Object} [props.classNames] - Object with checkbox and label class names for more granular styling
+ * @param {string} [props.className] - CSS class names to apply to the label element (only effective when label is provided). Example: className="text-white"
+ * @param {Object} [props.classNames] - Object with checkbox and label class names for more granular styling. Example: classNames={{ label: "text-white", checkbox: "custom-checkbox" }}
  * @param {string} [props.classNames.checkbox] - CSS class names for the checkbox input
- * @param {string} [props.classNames.label] - CSS class names for the label element
+ * @param {string} [props.classNames.label] - CSS class names for the label element (alternative to className prop)
  */
 export const Checkbox = ({ label, className, classNames = {}, ...rest }) => {
     const id = useId("checkbox");
