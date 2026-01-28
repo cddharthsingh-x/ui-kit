@@ -24,7 +24,7 @@ export const Checkbox = ({ label, className, classNames = {}, ...rest }) => {
             {label ? (
                 <label
                     htmlFor={id}
-                    className={clsx("ui-checkbox-label", classNames.label, className, "ml-2 leading-none text-gray-darker")}
+                    className={clsx("ui-checkbox-label", classNames.label, "ml-2 leading-none text-gray-darker", className)}
                 >
                     {label}
                 </label>
@@ -34,7 +34,7 @@ export const Checkbox = ({ label, className, classNames = {}, ...rest }) => {
 };
 
 Checkbox.propTypes = {
-    label: PropTypes.node.isRequired,
+    label: PropTypes.node,
     className: PropTypes.string,
     classNames: PropTypes.shape({ checkbox: PropTypes.string, label: PropTypes.string }),
     onChange: PropTypes.func,
