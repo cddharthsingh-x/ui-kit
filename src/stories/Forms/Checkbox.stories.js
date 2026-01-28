@@ -32,4 +32,15 @@ export const Disabled = () => {
     );
 };
 
+export const WithCustomClassName = () => {
+    const [checked, setChecked] = useState(false);
+    return (
+        <div className="space-y-3 bg-gray-800 p-4">
+            <Checkbox label="White text checkbox" className="text-white" checked={checked} onChange={(event_) => setChecked(event_.target.checked)} />
+            <Checkbox label="Red text checkbox" className="text-red-500 font-bold" />
+            <Checkbox label="Large text checkbox" className="text-xl" />
+        </div>
+    );
+};
+
 export default CheckboxStories;

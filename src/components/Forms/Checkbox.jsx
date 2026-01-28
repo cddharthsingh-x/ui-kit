@@ -8,7 +8,7 @@ export const Checkbox = ({ label, className, classNames = {}, ...rest }) => {
     const id = useId("checkbox");
 
     return (
-        <div className={clsx("ui-checkbox", className, "flex items-center")}>
+        <div className={clsx("ui-checkbox", "flex items-center")}>
             <input
                 type="checkbox"
                 className={clsx(
@@ -24,7 +24,7 @@ export const Checkbox = ({ label, className, classNames = {}, ...rest }) => {
             {label ? (
                 <label
                     htmlFor={id}
-                    className={clsx("ui-checkbox-label", classNames.label, "ml-2 leading-none text-gray-darker")}
+                    className={clsx("ui-checkbox-label", classNames.label, className, "ml-2 leading-none text-gray-darker")}
                 >
                     {label}
                 </label>
